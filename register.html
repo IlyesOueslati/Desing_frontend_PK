@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- w nagłówku określamy elementy, które nie są widoczne na stronie -->
+    <link rel="stylesheet" type="text/css" href="styleRegister.css">
+    
+    
+        <!-- uwzględiamy skrypt w html -->
+        <script type="text/javascript" src="ad.js" defer></script>
+    
+    <!-- w tym miejscu określamy z jakiego pliku bierzemy stylowanie -->
+    <title>Register PAGE</title>
+    <!-- tytuł strony -->
+</head>
+
+<body>
+    <!-- w ciele mamy układ naszej strony -->
+    <div class="container">
+        <div class="logo">
+            <img src="logo.svg">
+            <!-- logo -->
+        </div>
+        <div class="login-container">
+            <form class="login" action="login" method="POST">
+                <p class="header">
+                    Rejestracja do systemu
+                </p>
+                <!-- formularz, w którym będziemy podawać dane logowania -->
+                <input name="firstname" type="text" placeholder="Imię">
+                <input name="lastname" type="text" placeholder="Nazwisko">
+                <input name="email" type="text" placeholder="login">
+                <input name="password" type="paswword" placeholder="hasło">
+                <a href="recoverPassword" class="link" id="recoverPassword">Nie pamiętasz hasła?</a>
+                <button type="submit">Zarejestruj się</button>
+                
+            </form>
+        </div>
+        <!-- reklama -->
+        <div class="ad">
+            <img src="ad.png">
+        </div>
+    </div>
+</body>

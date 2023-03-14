@@ -1,0 +1,165 @@
+/* pobranie czcionki
+font-family jest to nazwa rodziny czcionek, podajemy tam dokładną nazwę pobranej czcionki
+src określa ścieżkę do pliku czcionki
+format określa rozszerzenie czcionki, u nas mamy .ttf czyli TrueTypeFont*/
+
+@font-face {
+    font-family:'IBM_Plex_Mono';
+    src:url('font.ttf')format('truetype');
+}
+
+
+/* ustawienie obramowania strony, musi być ustawiona wartość 0
+załadowanie czcionki do większości elementów*/
+
+body {
+    margin:0;
+    font-family:'IBM_Plex_Mono';
+}
+
+
+/* odnosimy się do głównego kontenera, w którym znajduje się logo i formularz
+poniższe wartości kopiujemy z figmy*/
+
+.container {
+    position:relative;
+    width: 1920px;
+    height: 1080px;
+    background:linear-gradient(0.37deg, #FFFFFF -17.07%, #114592 101.29%);
+}
+
+
+/*ustawienie wielkości i pozycji logo, poniższe wartości również możemy skopiować z figmy*/
+
+.logo {
+    position:absolute;
+    width:729px;
+    height:742px;
+    left:151px;
+    top:169px;
+}
+
+/*kontener zawierający formularz logowania, tutaj ustawiamy jak mają być ustawione wszystkie elementy, 
+można sobie to podejrzeć 
+i modyfikować w przeglądarce, dzięki funkcji Zbadaj element */
+
+.login-container {
+    position:absolute;
+    width:729px;
+    height:742px;
+    left:1040px;
+    top:169px;
+}
+
+/* ustawienia formularza logowania, wartości z figmy */
+
+form.login {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:729px;
+    height:742px;
+    left:1040px;
+    top:169px;
+    background:rgba(255,255,255,0.26);
+    box-shadow:20px 15px 10px rgba(0,0,0,0.25);
+    border-radius:20px;
+}
+
+
+/*ustawienia przycisku, większość wartości pobieramy z figmy, dodatkowomożemy modyfikować 
+czcionkę (wszystko z "font"),
+oraz ustawić odstęp poniżej elementu (margin-bottom) */
+
+button { 
+    font-family:'IBM_Plex_Mono';
+    font-style:normal;
+    font-weight:200;
+    font-size:36px;
+    line-height:47px;
+    color:#FFFFFF;
+    margin-bottom:10px;
+    width:480px;
+    height:67px;
+    left:1165px;
+    top:656px;
+    background:#24539A;
+    border-radius:5px;
+    border:none;
+}
+
+
+/* ustawienia pola do wpisywania tekstu, w naszym przypadku login i hasło */
+
+input {
+    font-style:normal;
+    font-weight:400;
+    font-size:32px;
+    line-height:42px;
+    color:rgba(0,0,0,0.35);
+    width:480px;
+    height:67px;
+    left:1165px;
+    top:377px;
+    background:#D9D9D9;
+    border-radius:5px;
+    border:none;
+}
+
+/* ustawienia napisu "Logowanie do systemu" */
+
+.header {
+    margin-bottom:70px;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    line-height:52px;
+    color:#FFFFFF;
+    text-shadow:2px2px4pxrgba(0,0,0,0.5);
+}
+
+/* ustawienia linków do resetowania hasła i rejestracji*/
+
+link {
+    margin-bottom:50px;
+    width:480px;
+    height:31px;
+    left:1165px;
+    top:744px;
+    font-style:italic;
+    font-weight:1000;
+    font-size:24px;
+    line-height:31px;
+    color:#2B28A1;
+}
+
+/* odniesienie do elementu bezpośrednio przez jego nazwę, ustawiamy tutaj odstęp poniżej */
+
+input[name="email"] {
+    margin-bottom:10px;
+}
+
+input[name="password"] {
+    margin-bottom:10px;
+}
+
+input[name="firstname"] {
+    margin-bottom:10px;
+}
+
+input[name="lastname"] {
+    margin-bottom:10px;
+}
+
+.ad {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ad img {
+    width: 750px;
+    height: 150px;
+    border-radius: 10px;
+}
